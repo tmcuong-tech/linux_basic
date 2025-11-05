@@ -1,0 +1,14 @@
+Shell
+- Shell là một chương trình có chức năng thực thi các lệnh (command) từ người dùng, ứng dụng.
+- Có khả năng bảo vệ kernel từ các yêu cầu không hợp lệ.
+
+các loại Shell
+- Bash (Bourne Again Shell)
+- Zsh(Z Shell)
+- Fish (Friendly Interactive Shell)
+- Ksh (Korn Shell)
+- Csh(C Shell)
+
+Dấu nhắc Shell
+- tài khoản thông thường: name@tên_thiết_bị:~$
+- tài khoản có quyền cao nhất trong hệ thống: root@tên_thiết_bị:~#

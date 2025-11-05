@@ -1,0 +1,6 @@
+cài đặt codeblocks
+
+tải trực tiếp bằng terminal
+	sudo apt-get install codeblocks
+
+

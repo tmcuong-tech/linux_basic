@@ -1,0 +1,100 @@
+Quản lý tệp tin và thư mục:
+ls : hiểm thi danh sách các tệp tin, thư mục tại vị trí hiện tại hoặc câu lệnh kèm theo đường dẫn đế nơi người dùng muốn xem danh sách tệp tin, thư mục.
+tùy chọn:
+'-L' : hiểm thị danh sách file (chỉ hiểm thị tên).
+'-l' : hiểm thị danh sách file (gồm nhiều cột: filename, size, date,...).
+'-a' : liệt kê tất cả các file bao gồm các file ẩn.
+'-R' : liệt kê tất cả các file kể cả các file bên trong thư mục con.
+'-1' : hiểm thị thông tin chi tiết về các tệp tin và thư mục.
+'-h' : hiểm thị kích thước của các tệp tin và thư mục theo đơn vị nhân với 1024, ở dạng để đọc.
+'-t' : sắp xếp kết quả theo thời gian sửa lỗi, từ mới nhất đến cũ nhất.
+'-r' : sắp xếp kết quả theo thứ tự ngược lại.
+'--color' : tô màu cho kết quả hiểm thị
+'-S' : sắp xếp các kết quả theo kích thước, từ lớn nhất đến nhỏ nhất.
+'-G' : hiểm thị kết quả dưới dạng ngắn gọn, không hiểm thị tên sở hữu.
+'-i' : hiểm thị số incode của mỗi tệp tin hoặc thư mục.
+'--group-directories-first' : nhóm tất cả các thư mục đầu tiên, sau đó là tệp tin.
+
+
+Tạo mới thư mục:
+mkdir - (viết tắt của "make directory") : tạo mới một tệp tin, thư mục
+cấu trúc câu lệnh: mkdir | Options | Directory
+Options:
+'-p' : cho phép tạo thư mục con ngay cả khi chưa có thư mục cha
+Directory: tên thư mục muốn tạo
+
+
+xem cây thư mục:
+tree : xem cấu trúc cây của thư mục tại vị trí hiện tại
+
+
+xem thông tin thư mục:
+du - (viết tắt cảu "disk usage") : hiểm thị thông tin về dung lượng sử dụng trên đĩa của các thư mục và tệp tin ở vị trí hiện tại
+Options hiểm thị số dung lượng theo mong muốn:
+'-h' : Hiển thị dung lượng đĩa được sử dụng ở dạng dễ đọc (KB, MB, GB).
+'-s' : Hiển thị tổng dung lượng của thư mục được chỉ định mà không hiển thị chi tiết của từng tệp.
+'-a' : Hiển thị dung lượng của tất cả các tệp và thư mục, bao gồm cả các tệp ẩn.
+'-c' : Hiển thị tổng dung lượng của tất cả các thư mục và tệp, cùng với tổng cộng ở cuối.
+
+
+Xóa thư mục rỗng:
+'rmdir' - (viết tắt của "remove directory") : xóa các tệp tin, thư mục rỗng
+cú pháp: rmdir [options] directory
+
+options:
+'-p' : xóa thư mục và cả thư mục cha
+
+directory: tên thư mục muốn xóa
+
+
+tạo tệp tin:
+echo : tạo tập tin với nội dung text.
+cú pháp: 
+cách 1: echo "nội dung" data/tên_file.txt
+cách 2: echo "nội dụng" >> data/tên_file.txt
+
+tạo tập tin rỗng:
+touch : tạo một tập tin rỗng
+cú pháp: touch data/tên_file.txt
+
+					
+Xem nội dung tập tin
+cat : xem nội dung của tập tin ở dạng text
+cú pháp:
+cat [tên_file]
+cat [đường_dẫn_đến_file_muốn_xem]
+
+
+Lệnh Copy
+cp : copy file từ nơi chữa file vè thêm file vào một vị trí khác
+cú pháp: cp [options] Source_Dest
+
+options:
+'-R', '-r' : sao chép toàn bộ thư mục
+
+Source_Dest: nơi mà thư mục được copy muốn dán v
+
+
+câu lệnh di chuyển
+mv - (viết tắt của "move") : 
+- dùng dể duy chuyển thư mục hoặc file từ này sang nơi khác
+- dùng để đổi tên file, thư mục tại vị trí hiện tại
+
+cú pháp: 
+di chuyển file: mv [options] tên_file_muốn_di_chuyển nơi_nhận_file
+đổi tên file: mv [options] tên_file_muốn_đổi tên_file_mới
+
+opsions:
+'-i' : nhắc trước khi duy chuyển với tập tin, thư mục địch đã có
+'-f' : ghi đè khi di chuyển với tập tin, thư mục đích đã có
+
+
+
+Xóa tập tin / thư mục
+rm : dùng để xóa file, thư mục. Lệnh này được xem là lệnh nguy hiểm của linux
+cú pháp: rm [options] file
+
+options:
+'-f' : xóa không cần hỏi
+'-i' : hỏi trước khi xóa
+'-r' : hỏi trước khi xóa (hỏi chi tiết các file trong thư mục)

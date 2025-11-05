@@ -1,0 +1,58 @@
+lập trình shell cách debug
+
+nội dung file docghifile_sapxepmang.sh
+        #!/bin/bash -xv
+
+        # khai bao file
+        file_input="$1"
+        file_output="$2"
+
+        # kiem tra file input co ton tai khong
+        if [ ! -f "$file_input" ]; then
+                echo "file khong ton tai"
+                exit
+        fi
+
+        # doc mang tu file
+        read -r -a arr < "$file_input"
+
+        # lay so luong phan tu trong mang
+        n=${#arr[@]}
+
+        # sap xep mang
+        for ((i = 0; i < n-1; i++)); do
+                for ((j = 0; j < n-2; j++)); do
+                        if [ ${arr[j} -lt ${arr[i]} ]; then
+                                temp=${arr[i]}
+                                arr[i] = ${arr[j]}
+                                arr[j] = $temp
+                        fi
+                done
+        done
+
+        # xuat mang
+        echo "${arr[@]}" > "$file_output"
+
+
+cách debug
+thêm vào biến cờ vào sau #!/bin/bash
+
+các biến cờ
+set -x: cờ này dùng để bật chế độ degub trong bash. khi được kích hoạt bằng cách thêm set -x vào đầu script, bash để hiểm thị mỗi dòng lệnh trước khi nó được thực thi. giúp theo dõi luồng thực thi cảu chương trình và xác định nơi xảy ra lỗi
+- set -v: cờ này dùng để hiểm thị các dòng lệnh trước khi chúng được thực thi, nhưng khác với set -x, nó không hiểm thị các dòng lệnh được mở rộng (expanded commands). thay vao đó, nó chỉ hiểm thị các dong lệnh trong cách viết gốc rộng của chúng. điều này có thể hữu ích khi bạn muốn xem cách viết gốc của một dòng lệnh trong script của mình
+
+
+debug toàn bộ chương trình
+- nếu đật biến cở ở shell script, thức là đặt ở đầu chương trình (#!/bin/bash -xv) thì nó sẽ debug toàn bộ chương trình
+
+debug một đoạn nào đó
+tại dòng trước đọạn muốn degub: 
+set -xv
+đoạn code muốn debug nào bên trong
+tại dòng sau đoạn muốn debug:
+set +xv
+
+ví dụ:
+	set -xv
+	[code muốn debug]
+	set +xv

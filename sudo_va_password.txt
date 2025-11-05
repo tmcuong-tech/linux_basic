@@ -1,0 +1,21 @@
+Lệnh sudo
+- sudo - (viết tắt của "superuser do") dùng để thực thi lệnh với quyền hạn người dùng khác, thường là người dùng root hoặc người có quyền hạng cao hơn.
+- khi dùng lệnh sudo, người dùng cần nhập mật khẩu để xác nhận danh tính
+- mật khẩu đúng -> lệnh sau [sudo] sẽ được thực thi vời quyền hạn của người dùng root hoặc người dùng khác được chỉ định trong tệp cấu hình sudoers.
+- khi các lệnh hoặc chương trình đồi hỏi quyền hạn cao như cài đặt hoặc xóa cá gói phần mềm, quản lý hệ thống, chỉnh sửa các tệp cấu hình của hệ thống,...
+- ngăn chặn người dùng không có quyền truy cập vào cá hoạt động nguy hiểm có thể gây hại cho hệ thống.
+
+ví dụ: 
+sudo apt update: cập nhật các gói phần mềm, nhưng không thực hiện việc cài đặt các gói cập nhật mới.
+sudo apt upgrade: cập nhật các gói phần mềm đã được cài đặt lên phiên bản mới nhất có sẵn từ kho lưu trữ.
+
+
+Đặt mật khẩu
+- passwd: đặt mật khẩu cho người dùng cụ thể
+cú pháp: passwd [username]
+
+
+Đặt mật khẩu cho tài khoản root:
+- tài khoản root: là tài khoản có quyền hạn cao nhất hệ thống
+- tài khoản root có quyền truy cập tời tất cả các tệp tin và thư mục trên hệ thống, có thể thực thi bất kỳ lệnh nào có quyền hạn cao nhất và có khả năng thay đổi cấu hình hệ thống
+cú pháp: sudo passwd root

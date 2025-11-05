@@ -1,0 +1,15 @@
+cài đặt visual studio code
+
+cài đặt trực tiếp trên trang web chính thức
+
+các bản phân phối linux của debian đa số sẽ cài đặt có đuôi là file.beb
+
+- một số bản phân phối khác có thể cài đặt có đuôi file.rpm
+
+
+các thao tác cài đặt
+- tải file visual studio code có đuôi file.deb
+- vào thư mục chứa file visual studio code đã tải về
+- cài đặt file bằng lệnh:
+	sudo dpkg -i tên_file_visual_studio_code.deb
+

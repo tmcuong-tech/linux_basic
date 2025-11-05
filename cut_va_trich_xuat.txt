@@ -1,0 +1,12 @@
+cắt (cut) và trích xuất
+
+cut
+cú pháp cơ bản của lệnh cut
+cú pháp tổng quát: cut [options] [file]
+một số tùy chọn thường được sử dụng:
+	-d, --delimiter=DELIM: xác định ký tự phân cách  (delimiter) giữa các trường 
+	-f. --firlds=LIST: xác định các trường muốn trích xuất, các trường được phân cách bởi dấu phẩy
+	-c, --charaters=LIST: xác định các ký tự muốn trích xuất từ mỗi dòng
+	-b. cắt theo từng byte
+
+

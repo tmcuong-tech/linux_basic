@@ -1,0 +1,24 @@
+quản trị group
+
+
+- nhóm là tập hợp của nhiều user. mỗi nhóm của tên duy nhất, và có một mã định danh duy nhất (gid). khi tạo một user (không dùng option -g) thì mặc định một group được tạo ra
+
+
+file /etc/group
+- là tập tin văn bản chứa thông tn về nhóm user trên máy. mọi user đều có thể đọc tập tin này nhưng chỉ có root mới có quyền thay đổi
+	
+	disk:*:6:juser,beazley
+disk: group name
+*: password
+6: group ID
+juser, beazley: additional members
+
+- mỗi dòng trong tập tin chứa thông tin các nhóm user trên máy, định dạng của dòng gồm nhiều cột giá trị, dấu ":" được sử dụng để phân cách các cột
+- ý nghĩa các cột:
+	- cột 1: tên nhóm
+	- cột 2: mật khẩu đã được mã hóa - dể trống "": không có mật khẩu, - dấu "*": tài khoản bị tạm ngưng (disable)
+	- cột 3: mã nhóm (gid)
+	- cột 4: danh sách các user thuộc nhóm
+	
+	
+

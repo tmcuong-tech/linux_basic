@@ -1,0 +1,74 @@
+Hệ thống thư mục:
+/(root): sbin, usr, dev, var, etc, home
+usr: sbin, bin, lib, man
+home: User01, User02,...
+
+ví dụ hệ thống thư mục:
+name@linux:~$ tree -L 1 /
+/
+├── bin -> usr/bin
+├── boot
+├── cdrom
+├── dev
+├── etc
+├── home
+├── lib -> usr/lib
+├── lib64 -> usr/lib64
+├── lost+found
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin -> usr/sbin
+├── snap
+├── srv
+├── swap.img
+├── sys
+├── tmp
+├── usr
+└── var
+23 directories, 1 file
+
+Chức năng của từng thư mục:
+/: thư mục gốc của hệ thống, tất cả các thư mục và tệp đều nằm dưới đây.
+/bin: các lệnh cần thiết cho việc khởi động và sử dụng hệ thống.
+/boot: các hệ thống cần thiết cho quá trình khởi động.
+/dev: các tệp biểu diễn thiết bị phần cứng trong hệ thống.
+/etc: các tệp cấu hình cho hệ thống và các ứng dụng.
+/home: thư mục dành cho người dùng cá nhân.
+/lib và /lib64: các thư viện cần thiết cho các chương trình trong quá trình thực thi.
+/opt: các ứng dụng cài đặt bổ sung từ các nhà cung cấp bên ngoài phân phối hệ điều hành.
+/tmp: thư mục tạm thời dành cho các tệp tạm thời.
+/usr: các tệp hệ thống chia sẻ dữ liệu, ứng dụng và tài nguyên phổ biến cho người dùng.
+/var: các dữ liệu thay đổi thường xuyên trong quá trình thực thi của hệ thống.
+
+Các kiểu file:
+- Regular files (tệp thường): chứa các tệp thông thường như văn bản, mã ngồn, hình ảnh, video,... ví dụ: example.txt - là một tệp văn 
+- Directory (Thự mục): có thể chữa nhiều file hoặc nhiều thư mục con trong cùng một thư mục
+- Special files (tệp đặc biệt): các tập đại diện cho phần cứng ( ổ đĩa CD-ROM, bàn phím,...) hoặc các chứng năng đặt biệt của hệ thống (FIFOs hoặc sockets) ví dụ: //dev/sda - là tệp đặc biệt đại diện cho ổ cứng trong hệ thống
+
+
+các từ khóa làm việc với thư mục, file:
+'-': tệp thường (regular file)
+'d': thư mục (directory)
+'l': liên kết tượng trưng (symbolic link)
+'c': thiết bị ký tự (character device)
+'b': thiết bị khối (blaock device)
+'s': Socket
+'p': ống đặt tên (name pipe)
+'?': không rõ hoặc không xác định (other or undefined)
+
+note: trong Linux, các tệp ẩn là các tệp bắt đầu bằng dấu chấm (".")
+
+Đường dẫn (Path)
+- chuỗi các thư mục và tệp tin được sử dụng để xác định vị trí của một tệp hoặc một thư mục trong hệ 
+
+Đường dẫn tuyệt đối (Absolute path)
+- đường dẫn bắt đầu từ thư mục gốc (/) và đi đến mỗi thư mục con hoặc đến các tệp mong muốn.
+ví dụ: /home/user/Documents/file.txt - /: root (gốc)
+
+Đường dẫn tương đối (Relative path)
+- đường dẫn bắt đầu từ vị trí hiện tại và chỉ định vị trí của tệp hoặc các thư mục trên vị trí hiện tại. 
+ví dụ: ../Piectures/photo.
