@@ -10,10 +10,10 @@ shutdown
 	-h: shutdown
 	-r: restart
 	-c: cancel pending shutdown
-time:
-	now : thực hiện ngay lập tức
-	hh:mm : ấn định thời gain thực hiện
-	+m : sau m phút sẽ thực hiện
+	time:
+		now : thực hiện ngay lập tức
+		hh:mm : ấn định thời gain thực hiện
+		+m : sau m phút sẽ thực hiện
 - wall: message thông báo
 ví dụ: shutdown -r +10 "khoi dong lai may sau 10 phut"
 
