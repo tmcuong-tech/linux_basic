@@ -2,7 +2,7 @@ BIỂU THỨC CHÍNH QUY - REGULAR EXPRESSION - REGEX
 - Là một chuỗi ký tự đặc biệt được sử dụng để mô tả một mẫu chuỗi.
 - Mục đích: Regex thường được sử dụng trong các hoạt động tìm kiếm, thay thế, xử lý văn bản.
 
-ký hiệu 		mô t
+ký hiệu 		mô tả
 . 		Ký tự bất kỳ.
 
 [] 		[..] Mô tả một tập hợp các ký tự, các mẫu. Còn [^...] là phủ định của [], phù hợp nếu không có ký tự nào trong [^].
