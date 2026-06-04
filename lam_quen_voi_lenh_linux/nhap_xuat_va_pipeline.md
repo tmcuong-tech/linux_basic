@@ -1,0 +1,10 @@
+ĐỊNH HƯỚNG NHẬP, XUẤT CƠ CHẾ ĐƯỜNG ỐNG '>', '<', '>>', '|'
+'>' : xuất dữ liệu ra file.
+xóa dữ liệu nếu file cũ đã tồn tại
+
+'>>' : xuất dữ liệu và ghi thêm dữ liệu vào cuối file
+'<' : nhập dữ liệu từ file
+'|' : đường ống pipeline
+
+'|' - (gọi là "pipe") : sử dụng để kết nối đầu ra của một lệnh với đầu vào của một lệnh khác. Điều này cho phép bạn chuyển dữ liệu từ một lệnh sang một lệnh khác mà không cần phải lưu trữ dữ liệu trung gian trong tập tin.
+

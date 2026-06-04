@@ -1,0 +1,30 @@
+cấu hình mạng
+
+các file cấu hình network
+- /etc/hosts: dùng phân giải hostname không thể phân giải được. có thể dùng thay DNS trong hệ thống mạng LAN.
+- /etc/resolv.conf: chỉ định DNS server để phân giải tên miền
+
+định dạng tên card mạng
+	en -- enternet
+	sl -- serial line IP (slip)
+	wl -- wlan
+	ww -- wwan
+
+xem danh sách các thiết bị card mạng:
+	ls /sys/class/net/
+
+các lệnh network
+	ifconfig - xem địa chỉ ip
+	ip addr - xem địa chỉ ip
+	tắt mở card mạng:
+		ifup tên_card - bật card mạng
+			hoặc sudo ifconfig tên_card_mạng up
+		ifdown tên_card - tắt card mạng
+			hoặc sudo ifconfig tên_card_mạng down
+	khởi động dịch vụ:
+		service network restart
+		/etc/init.d/network restart
+		systemctl restart network.service
+	route - xem thông tin gateway
+	
+

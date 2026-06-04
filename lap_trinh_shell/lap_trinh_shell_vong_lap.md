@@ -1,0 +1,47 @@
+lập trình shell vòng lặp
+
+
+while
+sử dụng vòng lập while
+	#!/bin/bash
+
+	counter=1
+
+	while [ $counter -le 5]; do
+		echo "vòng lập số $counter"
+		((++counter))
+	done
+
+
+for
+sử dụng vòng lập for
+	#!/bin/bash
+
+	for i in {1..5}; do
+		echo "giá trị của biến i là: $i"
+	done
+
+
+sử dụng vòng lặp for trong danh sách tham số
+	#!/bin/bash
+
+	for param in "$@"; do
+		echo "tham số: $param"
+	done
+
+
+kết hợp điều kiện vòng lập:
+	#!/bin/bash
+
+	countee=1
+
+	while [ $counter -le 5 ] do
+		if [ $counter -lt 3 ] then
+			echo "vòng lập số $counter"
+		else
+			echo "vòng lăp kết thúc"
+			break
+		fi
+		((++counter))
+	done
+

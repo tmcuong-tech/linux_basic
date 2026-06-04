@@ -1,0 +1,99 @@
+quyền trên file và thư mục
+
+
+phần quyền
+- phân quyền truy xuất đến các tài nguyên linux là một vấn đế quan trọng
+- phần quyền giúp tăng mức độ an toàn, đảm bảo đúng trách nhiệm - quyền hạn cảu từng user khi sử dụng tài nguyên trên máy
+
+
+quyền truy xuất
+- quyền truy xuất trên thư mục và tập tin được trình bày khi thực hiện lệnh ls -l
+ví dụ
+	#ls -l
+
+- đọc (read): cho phép đọc nội dung tập tin và xem nội dung thư mục bằng lệnh ls
+- ghi (write): cho phép thay đổi nội dung hoặc xóa tập tin. đối với thư mục, quyền này cho phép tạo, xóa, hoặc thay đổi tên tập tin mà không phụ thuộc vào quyền sở hữu trên tập tin chứa trong thư mục
+- thực thi (execute):  cho phép thực thi chương trình, đối với thư mục, quyền này cho phép chuyền vào thư mục bằng lệnh cd
+
+
+
+quyền truy xuất gồm 3 nhóm
+- quyền của người sở hữu (owner hoặc user) ký hiệu bằng ký tự u:  người tạo ra thư mục / tập tin hoặc được gán quyền sở hữu
+- quyền của nhóm (group) ký hiệu bằng ký tự g: nhóm người sử dụng được gán quyền
+- quyền của những người dùng khác (others) ký hiệu bằng ký tự 0: là những người sử dụng khác không thuộc về hai loại trên
+
+	- rwx rwx rwx
+		-: cấc đặc tính
+		rwx: user
+		rwx: group
+		rwx: other
+		
+- : regular file
+d: directory
+l: symbolic link
+b: block special file
+c: character special file
+p: named pipe
+s: socket
+
+
+
+biểu diễn quyền truy xuất
+- bằng chứ: trong cách biểu diễn này, quyền truy xuất được viết bằng các ký tự:
+	r: read
+	w: write
+	x: execute
+	-: không có quyền
+
+ví dụ
+rwx: có toàn quyền
+r--: chỉ có quyền đọc
+rw-: chỉ có quyền đọc và ghi
+---: không có quyền gì
+
+- quyền hạn trên 1 file sẽ gồm cả 3 nhóm quyền (owner, group, others) nên danh sách quyền sẽ gồm 9 ký tự
+	rwxrw----: người sở hữu có toàn quyền các user cùng nhóm chỉ có quyền đọc/ghi còn mọi người khác không có quyền truy xuất
+	rw-r-----: người sở hữu có quyền đọc/ghi, các user cùng nhóm chỉ có quyền đọc còn mọi người khác không có quyền truy xuất
+	rwxr-xr--: người sở hữu có toàn quyền, các user cùng nhóm chỉ có quyền đọc và thực thi chương trình còn mọi người khác chỉ có quyền đọc
+	
+
+- bằng số: trong cách biểu diễn này, mỗi quyền được gán cho một giá trị số theo bảng sau
+
+|-----------------|
+| quyền	| giá trị  | 
+|-----------------|
+|   r	|   4	  |
+|   w	|   2	  |
+|   x	|   1	  |
+-------------------
+
+ví dụ
+quyền 	ý nghĩa			biểu diễn bảng số
+rwx	có toàn quyền			7
+r--	chỉ có quyền đọc			4
+rw	chỉ có quyền đọc ghi		6
+---	không có quyền gì		0
+
+
+vì quyền thực sự gồm cả 3 nhóm quyền (owner, group, others) nên danh sách quyền biểu diễn dạng số sẽ gồm 3 chữ số
+
+dạng chữ	dạng số 	ý nghĩa
+rwxrw----	760		người sở hữu có toàn quyền các user cùng nhóm chỉ có quyền đọc/ghi còn mọi người khác không có quyền truy xuất
+rw-r--r--	644		người sở hữu có quyền đọc/ghi, các user cùng nhóm và mọi người khác chỉ có quyền đọc 
+rwxr-xr--	754		người sở hữu có toàn quyền, các user cùng nhóm chỉ có quyền đọc và thực thi chương trình còn mọi người khác chỉ có quyền đọc
+
+
+
+ví dụ
+- xem phân quyền bằng bảng số
+	stat -c "%a" file.txt
+
+stat: xem thông tin chi tiết của một tập tin (file) hoặc thư mục (directory)
+-c: Chỉ định định dạng (format) để hiển thị thông tin muốn in ra
+"%a" quyền truy cập (ở dạng số)
+file.txt: hoặc bất kì các file khác mà người dùng muốn kiểm tra phân quyền
+
+
+* lưu ý:
+- người sử dụng có quyền đọc thì có quyền sao chép tập tin và tập tin sau khi sao chép sẽ thuộc sở hữu người thực hiện sao chép
+

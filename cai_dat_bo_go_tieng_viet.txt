@@ -1,6 +1,0 @@
-cài đặt bộ gõ tiếng việt trên ubuntu
-
-1. sudo add-apt-respository ppa:ubuntu-vn/ppa
-2. sudo apt-get update
-3. sudo apt-get install ibus-unikey
-4. ibus restart

@@ -1,0 +1,39 @@
+cài đặt công cụ lập trình java
+
+- cài đặt java bằng terminal
+	sudo apt install default-jdk
+
+- cài đặt bằng ứng dụng trên web chính thức:
+	intellij
+		cài đặt từ trang web của jetbrains
+		dowload phiên bản community (free)
+		tải xuống tệp.tar
+		vào thư mục chứa tệp đã tải xuống
+		giải nén file.tar
+		vào thư mục bin
+		click phải chuột vào file idea.sh -> run a rogram
+	
+	eclipse
+		cài đặt trực tiếp trên web của eclipse
+		nhấn download file
+		vào thư mục chứa file đã tải xuống
+		giải nén file.tar
+		click phải chuột vòa file eclipse-install -> run
+
+
+
+cài đặt shortcuts cho một ứng dụng trên desktop
+	sudo apt-get install alacarte - ứng dụng có tên là main menu
+
+sau khi cài đăt alacarte
+	vào ứng dụng main menu
+	vào tab programming
+	new item
+		name: đặt tên cho shortcut
+		commmand: duyệt file chạy chương trình trong file thư mục (path đến file chạy chương trình)
+		comment: có thể bỏ trống
+	xong thiết lập -> ok
+	đóng ứng dụng main menu
+	-> shortcut đến ứng dụng đã được tạo ở desktop
+
+

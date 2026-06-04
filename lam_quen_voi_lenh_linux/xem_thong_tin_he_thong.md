@@ -1,0 +1,108 @@
+xem thông tin hệ thống
+
+xem thông tin RAM
+- xem tổng dung lượng, dung lượng hiện tại đang dùng, sung lượng còn trống. có 2 lệnh:
+
+- lệnh: cat /proc/meminfo
++ lệnh cat: dùng để đọc nội dung của file
++ /proc/meminfo: đây là đường dẫn (đường dẫn tuyệt đối) tới file chứa thông tin
++ RAM có tên là meminfo
+
+- lệnh: free
+-b: hiểm thị theo bytes
+-k: hiểm thị theo kilobytes
+-m: hiểm thị theo megabytes
+-g: hiểm thị theo gigabytes
+--tera: hiểm thị theo terabytes
+-h: hiểm thị theo kiểu tự động gom theo khối dữ liệu
+
+
+xem thông tin CPU
+- lệnh: cat /proc/cpuinfo
++ lệnh cat: dùng để đọc nội dung của file
++ /proc/cpuinfo: đây là đường dẫn (đường dẫn tuyệt đối) tới file chứa thông tin
++ CPU có tên là cpuinfo
+
+
+hiểm thịthông tin kernel
+- lệnh: uname -a
+options: -a : all information
+
+
+xem dung lượng ổ cứng
+- xem dung lượng ổ cứng đã dùng và còn trống bao nhiêu: df -h
+- options: -h : in kích thước mà người dùng có thể đọc
+
+
+xem thông tin model, serial,...phần cứng
+- xem thông tin model, serial,...phần cứng: dmidecode
+- options: -t : type
+- type information
+0: BIOS
+1: system
+2: baseboard
+3: chasis
+4: processor
+5: memory
+6: memory module
+7: cache
+8: port connector
+9: system slots
+10: on board devices
+11: OEM strings
+12: system configuration options
+13: BIOS language
+14: group associations
+15: system event log
+16: physical memory array
+17: memory divice
+18: 32-bit memory error
+19: memory array mapped address
+20: memory device mapped address
+21: built-in pointing device
+22: portable battery
+23: system reset
+24: hardware security
+25: system power controls
+26: voltage probe
+27: cooling device
+28: temperature
+29: electrical current probe
+30: out-of-band remote access
+31: boot integrity services
+32: system boot
+33: 64-bit memory error
+34: management device
+35: management divice component
+36: management device thresbold data
+37: memory channel
+38: IPMI device
+39: power supply
+40: additional informantion
+41: on-board device extended information
+42: management contraller host interface
+
+
+xem các tiến trình
+lệnh: top
+
+
+xem dung lượng cảu thư mục
+- lệnh xem dung lượng của thư mục: du
+- options:
+-s: xuất kết quả theo summarize (tổng dung lượng)
+-h: in kích thước mà người dùng có thể đọc
+
+ví dụ: xem dung lượng của thư mục /etc
+du -sh /etc
+
+
+lệnh xem tên server
+- lệnh xem tên server: hostname
+
+
+xem địa chỉ ip
+- lệnh xem địa chỉ ip: ifconfig
+
+
+
