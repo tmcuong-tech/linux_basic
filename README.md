@@ -161,8 +161,3 @@ linux_basic/
 - [Vòng lặp](lap_trinh_shell/lap_trinh_shell_vong_lap.md)
 - [Xây dựng hàm](lap_trinh_shell/lap_trinh_shell_xay_dung_ham.md)
 - [Kiểm tra số nguyên tố](lap_trinh_shell/lap_trinh_shell_kiem_tra_so_nguyen_to.md)
-
-## Ghi chú
-
-- Tên file hiện tại được giữ nguyên để tránh làm hỏng liên kết nội bộ.
-- Một vài tên file đã được chuẩn hóa lại để đồng bộ hơn với nội dung trong README.
